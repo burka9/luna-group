@@ -11,27 +11,27 @@ const serviceList = document.getElementById('service-list')
 
 const services = [
   {
-    img: 'assets/imgs/fresh-corner-1024x718.jpg',
+    img: 'fresh-corner-1024x718.jpg',
     title: 'Fresh Corner',
     subtitle: 'Fresh Corner is a fresh and healthy food shop',
   },
   {
-    img: 'assets/imgs/kym-ellis-aF1NPSnDQLw-unsplash.jpg',
+    img: 'kym-ellis-aF1NPSnDQLw-unsplash.jpg',
     title: 'Kym Ellis',
     subtitle: 'Kym Ellis is a fresh and healthy food shop',
   },
   {
-    img: 'assets/imgs/pexels-alejandro-barrón-96715.jpg',
+    img: 'pexels-alejandro-barrón-96715.jpg',
     title: 'Alejandro Barrón',
     subtitle: 'Alejandro Barrón is a fresh and healthy food shop',
   },
   {
-    img: 'assets/imgs/flash-dantz-AlxJrnhfDsQ-unsplash.jpg',
+    img: 'flash-dantz-AlxJrnhfDsQ-unsplash.jpg',
     title: 'Flash Dantz',
     subtitle: 'Flash Dantz is a fresh and healthy food shop',
   },
   {
-    img: 'assets/imgs/20191116_095431.jpg.gallery.jpg',
+    img: '20191116_095431.jpg.gallery.jpg',
     title: 'Slaughterhouse',
     subtitle: 'Slaughterhouse is a fresh and healthy food shop'
   },
@@ -42,7 +42,7 @@ for (const service of services) {
   item.classList.add('item')
   let pic = document.createElement('div')
   pic.classList.add('pic')
-  pic.style.backgroundImage = `url(${service.img})`
+  pic.style.backgroundImage = `url(/imgs/${service.img})`
   let content = document.createElement('div')
   content.classList.add('content')
   let title = document.createElement('p')
