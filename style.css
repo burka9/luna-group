@@ -3,10 +3,35 @@
 @tailwind utilities;
 
 @layer utilities {
-  .scoot-x {
+  .scoot-x-10 {
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+  .scoot-x-8 {
     padding-right: 8rem;
     padding-left: 8rem;
   }
+  .scoot-x-6 {
+    padding-right: 6rem;
+    padding-left: 6rem;
+  }
+  .scoot-x-4 {
+    padding-right: 4rem;
+    padding-left: 4rem;
+  }
+  .scoot-x-2 {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .scoot-x-1 {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .scoot-x-0 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .spacer-y-10 {
     margin-top: 10rem;
     margin-bottom: 10rem;
@@ -25,6 +50,7 @@
   }
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -36,8 +62,75 @@ body {
   @apply flex flex-col w-full min-h-screen leading-normal text-base;
 }
 
+#header {
+  @apply absolute w-full flex justify-between sm:items-center bg-white shadow
+    flex-col p-3 px-2 scoot-x-1 overflow-hidden
+    sm:flex-row
+    md:p-5 md:scoot-x-2
+    lg:p-6 lg:scoot-x-4
+    xl:p-7 xl:scoot-x-10
+}
+
+#header .logo {
+  @apply flex items-center justify-between grow;
+}
+
+#header .icon, #footer .icon {
+  @apply w-8 md:w-8 lg:w-12;
+}
+#header .name, #footer .name {
+  @apply w-20 md:w-24 lg:w-36;
+}
+
+#header #burger-menu {
+  @apply flex flex-col justify-between w-[36px] p-1.5
+    md:hidden;
+}
+#header #burger-menu div {
+  @apply h-0.5 my-[3px] w-full bg-smokey;
+}
+
+#header-links {
+  @apply uppercase font-bold relative px-4 text-smokey
+    flex flex-col text-sm h-0 sm:h-auto
+    sm:flex-row
+    lg:text-base;
+}
+
 #header-links .link {
-  @apply mx-3;
+  @apply my-2 sm:m-0 sm:mx-3 cursor-pointer hover:text-gray-800 transition;
+}
+#header-links .link:first-of-type {
+  @apply mt-3 sm:mt-0;
+}
+
+#link-hover {
+  bottom: -5px;
+  @apply absolute hidden sm:flex bg-smokey h-0.5 z-10 w-0 transition;
+}
+
+#hero {
+  @apply h-screen flex justify-center items-center bg-gray-200;
+}
+
+#hero #main-text {
+  @apply w-[65vw];
+}
+
+#services {
+  @apply p-24 flex flex-col items-center
+    scoot-x-1
+    md:scoot-x-2
+    lg:scoot-x-4
+    xl:scoot-x-8;
+}
+
+#service-list {
+  @apply grid
+    grid-cols-1 gap-y-10
+    md:grid-cols-2 md:gap-x-16 md:gap-y-14
+    lg:grid-cols-3 lg:gap-x-14 lg:gap-y-10
+    xl:gap-x-20 xl:gap-y-16;
 }
 
 #service-list .item {
@@ -80,6 +173,53 @@ body {
   @apply uppercase text-sm text-gray-500 font-bold;
 }
 
+#program {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @apply bg-[url('../assets/imgs/FM58EflXIAMlnwL.jpeg')]
+    flex justify-center relative overflow-hidden grayscale
+    py-5
+    lg:overflow-visible lg:py-0;
+}
+
+#program .background {
+  @apply absolute top-0 left-0 w-full h-full bg-[#0007] blur-2xl
+  lg:bg-slate-300 lg:blur-none;
+}
+
+#program .container {
+  @apply relative overflow-y-hidden
+    scoot-x-1
+    md:scoot-x-2
+    lg:grid lg:grid-cols-2 lg:scoot-x-4 lg:gap-x-16 lg:overflow-y-visible
+    xl:scoot-x-8 xl:gap-x-24;
+}
+
+#program .left {
+  @apply flex flex-col justify-between items-center lg:items-start py-14;
+}
+#program .right {
+  @apply lg:relative hidden lg:flex;
+}
+
+#program .heading {
+  @apply font-bold capitalize leading-tight
+    text-3xl text-center text-gray-100
+    md:text-4xl md:px-0
+    lg:text-5xl lg:text-start lg:text-gray-800;
+}
+#program .description {
+  @apply leading-tight my-12 text-gray-300
+    text-sm text-center px-4 sm:px-8
+    md:text-base md:px-16
+    lg:text-start lg:p-0 lg:text-gray-700;
+}
+#program button {
+  @apply text-gray-200 lg:text-gray-500;
+}
+
+
 #program .box {
   height: 107%;
   top: calc(-7% / 2);
@@ -93,4 +233,53 @@ body {
 #program .box:hover img {
   transform: scale(1.045);
   filter: grayscale(50%);
+}
+
+#footer {
+  @apply bg-slate-200 flex justify-between items-center py-3
+    scoot-x-1
+    md:py-4 md:scoot-x-2
+    lg:py-6 lg:scoot-x-4
+    xl:py-8 xl:scoot-x-8;
+}
+
+/**
+  * Cube
+*/
+#cube-box {
+  @apply fixed bottom-12 right-12 z-20;
+
+  perspective: 500px;
+
+  width: calc(var(--cube-size) * 2);
+  height: calc(var(--cube-size) * 2);
+}
+
+#cube {
+  @apply hidden sm:block absolute top-0 left-0 w-full h-full;
+  transform-style: preserve-3d;
+  transform-origin: var(--cube-size) var(--cube-size) 0;
+}
+.cube-face {
+  @apply absolute w-full h-full bg-smokey flex justify-center items-center
+    border border-slate-200;
+}
+
+#front {
+  transform: translateZ(calc(var(--cube-size)));
+}
+#back {
+  transform: rotate(-90deg) translateZ(calc(var(--cube-size) * -1));
+}
+#left {
+  transform: rotateY(90deg) translateZ(calc(var(--cube-size) * -1));
+}
+#right {
+  transform: rotateY(90deg) translateZ(calc(var(--cube-size) * 1));
+}
+#top {
+  transform: rotateX(-90deg) translateZ(calc(var(--cube-size) * -1));
+}
+#bottom {
+  transform: rotateX(90deg) translateZ(calc(var(--cube-size) * -1));
 }

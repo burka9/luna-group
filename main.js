@@ -1,48 +1,37 @@
 import './style.css'
+import './scripts/headerLink'
+import './scripts/animation'
+import './scripts/cube'
+import './scripts/burger-menu'
 
 
-const headerLinks = document.getElementById('header-links')
 
-const links = [
-  { text: 'Home', route: '#' },
-  { text: 'About', route: '#' },
-  { text: 'Our brands', route: '#' },
-  { text: 'Contact', route: '#' },
-]
-
-for (const link of links) {
-  let a = document.createElement('a')
-  a.classList.add('link')
-  a.innerHTML = link.text
-  a.href = link.route
-  headerLinks.appendChild(a)
-}
 
 const serviceList = document.getElementById('service-list')
 
 const services = [
   {
-    img: '/assets/imgs/fresh-corner-1024x718.jpg',
+    img: 'assets/imgs/fresh-corner-1024x718.jpg',
     title: 'Fresh Corner',
     subtitle: 'Fresh Corner is a fresh and healthy food shop',
   },
   {
-    img: '/assets/imgs/kym-ellis-aF1NPSnDQLw-unsplash.jpg',
+    img: 'assets/imgs/kym-ellis-aF1NPSnDQLw-unsplash.jpg',
     title: 'Kym Ellis',
     subtitle: 'Kym Ellis is a fresh and healthy food shop',
   },
   {
-    img: '/assets/imgs/pexels-alejandro-barrón-96715.jpg',
+    img: 'assets/imgs/pexels-alejandro-barrón-96715.jpg',
     title: 'Alejandro Barrón',
     subtitle: 'Alejandro Barrón is a fresh and healthy food shop',
   },
   {
-    img: '/assets/imgs/flash-dantz-AlxJrnhfDsQ-unsplash.jpg',
+    img: 'assets/imgs/flash-dantz-AlxJrnhfDsQ-unsplash.jpg',
     title: 'Flash Dantz',
     subtitle: 'Flash Dantz is a fresh and healthy food shop',
   },
   {
-    img: '/assets/imgs/20191116_095431.jpg.gallery.jpg',
+    img: 'assets/imgs/20191116_095431.jpg.gallery.jpg',
     title: 'Slaughterhouse',
     subtitle: 'Slaughterhouse is a fresh and healthy food shop'
   },

@@ -10,51 +10,56 @@
 
 <body>
 
+  <div id="cube-box" style="--cube-size: 12px;"><div id="cube"></div></div>
+
   <div class="wrapper relative">
-    <div class="header
-      absolute w-full
-      flex justify-between items-center
-      p-7 scoot-x
-      bg-white shadow
-    ">
-      <div class="logo flex items-center">
-        <div class="icon w-12">
-          <img src="/assets/icons/luna.svg" alt="Luna Group" class="object-contain">
+    <div id="header">
+      <div class="logo">
+        <div class="flex items-center">
+          <div class="icon" id="logo-icon-container">
+            <img src="assets/icons/luna.svg" alt="Luna Group" id="logo-icon">
+          </div>
+          <div class="name" id="logo-text-container">
+            <img src="assets/icons/luna-text.svg" alt="Luna" id="logo-text">
+          </div>
         </div>
-        <div class="name w-36">
-          <img src="/assets/icons/luna-text.svg" alt="Luna" class="object-contain">
+
+        <div id="burger-menu">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
         </div>
       </div>
-      <div id="header-links" class="uppercase font-bold"></div>
+      <div id="header-links">
+        <div id="link-hover"></div>
+      </div>
     </div>
 
-    <div class="hero
-      h-screen flex justify-center items-center
-      bg-gray-200
-    ">
-      <img src="/assets/icons/luna-text.svg" alt="Luna" class="w-2/5">
+    <div id="hero">
+      <img src="assets/icons/luna-text.svg" alt="Luna" id="main-text">
     </div>
 
-    <div id="services" class="p-24 scoot-x flex flex-col items-center">
+    <div id="services">
       <p class="text-4xl font-bold text-smokey mb-20">Our Services</p>
 
-      <div id="service-list" class="grid grid-cols-3 gap-x-28 gap-y-16"></div>
+      <div id="service-list"></div>
     </div>
 
     <div class="spacer-y-10"></div>
 
-    <div id="program" class="bg-slate-300">
-      <div class="container scoot-x grid grid-cols-2 gap-x-24 my-6">
-        <div class="left flex flex-col justify-between py-14">
-          <p class="text-5xl font-bold capitalize text-gray-800 leading-tight">our school feeding program</p>
-          <p class="text-base text-gray-700 leading-tight my-12">
+    <div id="program">
+      <div class="background"></div>
+      <div class="container">
+        <div class="left">
+          <p class="heading">our school feeding program</p>
+          <p class="description">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui, repellendus impedit. Tempore alias voluptas voluptatibus error reprehenderit hic qui vero quidem quisquam distinctio repellendus iusto a ipsa quae, eveniet ullam.
           </p>
           <div class="more"><button>More</button></div>
         </div>
-        <div class="right relative">
+        <div class="right">
           <div class="box">
-            <img src="/assets/imgs/FM58EflXIAMlnwL.jpeg" alt="Our School Feeding Program">
+            <img src="assets/imgs/FM58EflXIAMlnwL.jpeg" alt="Our School Feeding Program">
           </div>
         </div>
       </div>
@@ -62,13 +67,13 @@
 
     <div class="spacer-y-15"></div>
 
-    <div id="footer" class="bg-slate-200 flex justify-between items-center scoot-x py-8">
+    <div id="footer">
       <div class="logo flex items-center">
-        <div class="icon w-8">
-          <img src="/assets/icons/luna.svg" alt="Luna Group" class="object-contain">
+        <div class="icon">
+          <img src="assets/icons/luna.svg" alt="Luna Group">
         </div>
-        <div class="name w-24">
-          <img src="/assets/icons/luna-text.svg" alt="Luna" class="object-contain">
+        <div class="name">
+          <img src="assets/icons/luna-text.svg" alt="Luna">
         </div>
       </div>
       <div class="copyright">
