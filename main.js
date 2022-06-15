@@ -3,6 +3,7 @@ import './scripts/headerLink'
 import './scripts/animation'
 import './scripts/cube'
 import './scripts/burger-menu'
+import './scripts/program'
 
 
 
